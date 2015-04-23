@@ -75,7 +75,6 @@ def main():
     while(1):
         alive_num = 0
         last_alive_index = 0
-        subnet_max = 16*1024
         index     = 0
         thread_pool = []
 
@@ -83,7 +82,7 @@ def main():
 
         for ip in need_to_ping:
             index += 1
-            if(index > subnet_max or index-last_alive_index > maxjump):
+            if(index-last_alive_index > maxjump):
                 break;
             t = PingOne(interval,timeout,count,ip,index,DEVNULL)
             thread_pool.append(t)
