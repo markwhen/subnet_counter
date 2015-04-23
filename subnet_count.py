@@ -34,7 +34,7 @@ class PingOne(threading.Thread):
 
 def main():
     parser = OptionParser()
-    parser.add_option("-m", "--multithread", dest="multithread", help="number of threads for concurrency")
+    parser.add_option("-m", "--multithread", dest="multithread", help="number of threads for concurrency, default is 10")
     parser.add_option("-t", "--target", dest="target", help="Target ip in network to scan -t 192.168.192.0.10/24")
     parser.add_option("-f", "--filename", dest="filename", help="the file to record recent counting result")
     parser.add_option("-j", "--maxjump", dest="maxjump", help="if more than MAXJUMP continuous IPv4 addresses not respond, stop")
@@ -92,7 +92,7 @@ def main():
                 tt.join()
         thread_pool[:] = []
         commands.getstatusoutput("echo "+str(alive_num)+" > "+filename)
-        print "find"+str(alive_num)+"alive ipv4 addresses"
+        print "find "+str(alive_num)+" alive ipv4 addresses"
 
 if __name__ == '__main__':
     main()
