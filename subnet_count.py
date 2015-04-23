@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+# Michael
+# Mark Sheng, i@markwhat.com
+# 2015-4-23, Beijing
+
 from ipcalc import Network
 from optparse import OptionParser
 import os
