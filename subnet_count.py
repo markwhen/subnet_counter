@@ -102,6 +102,8 @@ def main():
         commands.getstatusoutput("echo "+str(alive_num)+" > "+filename)
         print "find "+str(alive_num)+" alive ipv4 addresses"
         time.sleep(sleeping)
+        # Note: It's not efficient to frequently create threads in python, so using a thread pool might be a great improving.
+        # Do it later.
 
 if __name__ == '__main__':
     main()
