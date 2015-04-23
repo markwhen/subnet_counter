@@ -4,6 +4,7 @@
 # Mark Sheng, i@markwhat.com
 # 2015-4-23, Beijing
 
+# maybe you should [pip install ipcalc] first of all
 from ipcalc import Network
 from optparse import OptionParser
 import os
