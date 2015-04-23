@@ -47,6 +47,7 @@ def main():
 
     if not options.target or not '/' in options.target:
         print "please specify a target: -t 192.168.0.10/24"
+        print "use -h to view helping text"
         return
 
     interval = (options.interval if options.interval else '0.1')
