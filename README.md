@@ -1,4 +1,6 @@
 # subnet_counter
+（多线程子网地址搜索器）
+
 This program in python is developed to detect(ping) all alive machines in a certain subnet using multithread technology.
 
 This work is based on https://github.com/michaelimfeld/netpulse and thanks.
